@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+npm-debug.log
+yarn-error.log
+.env
+
+dist/         # Ignore output directory for compiled files (if applicable)
+build/        # For React, ignore build output
+
+
+*.d.ts
