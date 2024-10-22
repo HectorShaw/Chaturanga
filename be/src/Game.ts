@@ -38,30 +38,21 @@ export class Game {
       to: string;
     }
   ) {
-    
     const currentTurn = this.board.turn();
-    //validation of your moves
 
-    
     if (currentTurn === "w" && socket !== this.player1) {
-     
-
       return;
     }
     if (currentTurn === "b" && socket !== this.player2) {
-    
-
       return;
     }
     try {
-
       this.board.move(move);
     } catch (e) {
       return;
     }
 
     if (this.board.isGameOver()) {
-
       const winner = this.board.turn() === "w" ? "black" : "white";
 
       this.player1.send(
@@ -84,7 +75,6 @@ export class Game {
     }
 
     if (this.board.history().length % 2 === 0) {
-
       this.player1.send(
         JSON.stringify({
           type: MOVE,
@@ -92,7 +82,6 @@ export class Game {
         })
       );
     } else {
-
       this.player2.send(
         JSON.stringify({
           type: MOVE,
@@ -100,6 +89,5 @@ export class Game {
         })
       );
     }
-
   }
 }

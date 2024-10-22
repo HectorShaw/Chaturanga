@@ -1,12 +1,46 @@
 # Node modules
 node_modules/
 
+# Log files
 npm-debug.log
 yarn-error.log
+pnpm-debug.log* 
+
+# Environment variables
 .env
+.env.local
+.env.*.local
 
-dist/         # Ignore output directory for compiled files (if applicable)
-build/        # For React, ignore build output
+# Build output
+dist/
+build/
 
+# Cache and temp files
+.vscode/
+.DS_Store
+*.lock
+*.cache
+*.log
 
+# TypeScript
 *.d.ts
+
+
+
+# IDE/Editor specific files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# VSCode specific files
+.vscode/
+
+# Vite cache
+.vite/
+
+# Tailwind CSS JIT cache
+.tailwind/
