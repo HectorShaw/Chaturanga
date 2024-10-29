@@ -6,7 +6,7 @@ import { Game } from "./pages/Game";
 
 function App() {
   return(
-    <div className="h-screen bg-blue-950">
+    <div className="h-screen bg-slate-950">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />}/> 

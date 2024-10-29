@@ -24,7 +24,6 @@ class Game {
     }
     makeMove(socket, move) {
         const currentTurn = this.board.turn();
-        //validation of your moves
         if (currentTurn === "w" && socket !== this.player1) {
             return;
         }
